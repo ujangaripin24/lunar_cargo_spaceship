@@ -1,0 +1,94 @@
+#1. create User
+###
+POST http://localhost:5000/user
+Content-Type: application/json
+
+{
+  "name": "Fajar Suhanna Putra",
+  "email": "alhidayahkircon@gmail.com",
+  "password": "123456",
+  "confPassword": "123456",
+  "number": "0812345678",
+  "role": "user"
+}
+
+#2. get user
+###
+GET http://localhost:5000/users
+
+#3. get user by id
+###
+GET http://localhost:5000/user/7421cf7d-823b-493e-9c12-dd64b50402ce
+
+#4. update user
+###
+PATCH http://localhost:5000/user/7421cf7d-823b-493e-9c12-dd64b50402ce
+Content-Type: application/json
+
+{
+  "name": "Ujang Aripin II",
+  "email": "ujang@gmail.com",
+  "password": "123456",
+  "confPassword": "123456",
+  "number": "+62 089123456654",
+  "role": "admin"
+}
+
+#5. delete user
+###
+DELETE http://localhost:5000/user/478e2cba-55fa-427f-a10f-301ffd160c2c
+
+#6. login
+###
+POST http://localhost:5000/login
+Accept: application/json
+Content-Type: application/json
+
+{
+    "email": "ujang@gmail.com",
+    "password": "123456"
+}
+
+#7. status user
+###
+GET http://localhost:5000/status
+
+#8. logout
+###
+DELETE http://localhost:5000/logout/
+
+#9. get product
+###
+GET http://localhost:5000/product
+
+#10. create product
+###
+POST http://localhost:5000/product
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "product by alhidayahkircon@gmail.com",
+    "price": 200000
+}
+
+#11. get product by id
+###
+GET http://localhost:5000/product/7ce10179-93e5-442b-8d18-7ea3f4dc0c1b
+
+#12. update product
+###
+PATCH http://localhost:5000/product/7ce10179-93e5-442b-8d18-7ea3f4dc0c1b
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "product by alhidayahkircon@gmail.com ",
+    "price": 200000
+}
+
+#13. delete product
+###
+DELETE http://localhost:5000/product/7ce10179-93e5-442b-8d18-7ea3f4dc0c1b
+
+# get kategori
