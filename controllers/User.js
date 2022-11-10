@@ -53,7 +53,7 @@ export const createUser = async (req, res) => {
             from: process.env.EMAIL,
             to: email,
             subject: "Register Success",
-            text: `You register here ${req.ip}`,
+            html: `<h1>Selamat Bergabung</h1>`,
         };
         transporter.sendMail(mailOptions, (err, info) => {
             if (err) {

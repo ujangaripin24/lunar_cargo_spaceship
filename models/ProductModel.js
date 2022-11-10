@@ -28,6 +28,20 @@ const Product = db.define('product', {
             notNull: true,
         }
     },
+    image: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            notNull: true,
+        }
+    },
+    url: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            notNull: true,
+        }
+    },
     userId: {
         type: DataTypes.INTEGER,
         allowNull: false,
