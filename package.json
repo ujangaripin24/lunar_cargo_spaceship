@@ -28,6 +28,7 @@
     "express-session": "^1.17.3",
     "mysql2": "^2.3.3",
     "nodemailer": "^6.8.0",
+    "pg": "^8.8.0",
     "sequelize": "^6.25.5"
   }
 }

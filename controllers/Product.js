@@ -9,7 +9,7 @@ export const getProducts = async (req, res) => {
         let response;
         if(req.role === "admin"){
             response = await Product.findAll({
-                attributes: ['uuid', 'name', 'price'],
+                attributes: ['uuid', 'name', 'price', 'url'],
                 include:[{
                     model: User,
                     attributes: ['name', 'email', 'role']
@@ -44,7 +44,7 @@ export const getProductById = async (req, res) => {
         let response;
         if(req.role === "admin"){
             response = await Product.findAll({
-                attributes: ['uuid', 'name', 'price'],
+                attributes: ['uuid', 'name', 'price', 'url'],
                 where:{
                    id: product.id
                 },
@@ -101,6 +101,7 @@ export const createProduct = (req, res) => {
         }
     })
 };
+
 export const updateProduct = async (req, res) => {
     // product update
     try{
@@ -122,6 +123,7 @@ export const updateProduct = async (req, res) => {
         res.status(500).json({msg: error.message});
     }
 };
+
 export const deleteProduct = async (req, res) => {
     try{
         // delete product
@@ -157,7 +159,7 @@ export const searchProduct = async (req, res) =>{
     });
     const totalPage = Math.ceil(totalRows / limit);
     const result = await Product.findAll({
-        attributes: ['name', 'price'],
+        attributes: ['name', 'price', 'url'],
         where:{
             [Op.or]: [{name:{
                 [Op.like]: '%'+search+'%'
