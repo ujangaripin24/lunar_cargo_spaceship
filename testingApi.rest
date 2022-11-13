@@ -45,7 +45,7 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    "email": "ujangarifin06@gmail.com",
+    "email": "ujang@gmail.com",
     "password": "123456"
 }
 
@@ -97,4 +97,4 @@ DELETE http://localhost:5000/product/7ce10179-93e5-442b-8d18-7ea3f4dc0c1b
 
 #14. search product
 ###
-GET http://localhost:5000/search?search_query=2000
+GET http://localhost:5000/search?search_query=fuckof
