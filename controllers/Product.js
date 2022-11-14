@@ -2,7 +2,7 @@ import Product from "../models/ProductModel.js";
 import User from '../models/UserModel.js';
 import { Op } from "sequelize";
 import path from "path";
-import fs from "fs";
+import { downloadResource } from '../config/Util.js';
 
 export const getProducts = async (req, res) => {
     try{
@@ -141,6 +141,22 @@ export const deleteProduct = async (req, res) => {
         res.status(500).json({msg: error.message});
     }
 };
+
+export const exportCsv = async(req, res) => {
+  const fields = [
+    {
+      label: 'Nama Product',
+      value: 'name'
+    },
+    {
+      label: 'Price',
+      value: 'price'
+    }
+  ];
+  const data = await Product.findAll();
+
+  return downloadResource(res, '../publi/users.csv', fields, data);
+ }
 
 export const searchProduct = async (req, res) =>{
     const page = parseInt(req.query.page) || 0;
