@@ -52,7 +52,7 @@ export const createUser = async (req, res) => {
         const mailOptions = {
             from: process.env.EMAIL,
             to: email,
-            subject: "Register Success",
+            subject: "Register Telah Berhasil",
             html: `<h1>Selamat Bergabung</h1>`,
         };
         transporter.sendMail(mailOptions, (err, info) => {
