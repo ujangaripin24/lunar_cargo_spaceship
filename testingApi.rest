@@ -36,7 +36,7 @@ Content-Type: application/json
 
 #5. delete user
 ###
-DELETE http://localhost:5000/user/478e2cba-55fa-427f-a10f-301ffd160c2c
+DELETE http://localhost:5000/user/ff3887c5-72a1-43ac-ab3c-a139a1d766a4
 
 #6. login
 ###
@@ -45,7 +45,7 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    "email": "ujang@gmail.com",
+    "email": "ujangarifin06@gmail.com",
     "password": "123456"
 }
 
@@ -97,7 +97,7 @@ DELETE http://localhost:5000/product/7ce10179-93e5-442b-8d18-7ea3f4dc0c1b
 
 #14. search product
 ###
-GET http://localhost:5000/search?search_query=fuckof
+GET http://localhost:5000/search?search_query=2000
 
 #15. export CSV data
 ###
