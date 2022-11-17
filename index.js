@@ -44,5 +44,5 @@ app.use(AuthRoute);
 // store.sync();
 
 app.listen(process.env.APP_PORT || 5000, function(){
-    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+    console.log("Express Berjalan Pada port %d in %s mode", this.address().port, app.settings.env);
   });
