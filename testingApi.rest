@@ -98,11 +98,15 @@ DELETE http://localhost:5000/product/7ce10179-93e5-442b-8d18-7ea3f4dc0c1b
 #14. search product
 ###
 <<<<<<< HEAD
+<<<<<<< HEAD
 GET http://localhost:5000/search?search_query=2000
 
 #15. export CSV data
 ###
 GET http://localhost:5000/export
+=======
+GET http://localhost:5000/search?search_query=fuckof
+>>>>>>> parent of c97c6e1 (14. export data to csv has been insalled | run on browser endpoint localhost:5000/export)
 =======
 GET http://localhost:5000/search?search_query=fuckof
 >>>>>>> parent of c97c6e1 (14. export data to csv has been insalled | run on browser endpoint localhost:5000/export)
