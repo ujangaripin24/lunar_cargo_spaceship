@@ -42,6 +42,13 @@ const Product = db.define('product', {
             notNull: true,
         }
     },
+    stock: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            notNull: true,
+        }
+    },
     userId: {
         type: DataTypes.INTEGER,
         allowNull: false,
