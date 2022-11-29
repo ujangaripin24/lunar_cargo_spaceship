@@ -19,9 +19,9 @@ const store = new sessionStore({
     db: db
 });
 
-// (async() =>{
-//     await db.sync();
-// })();
+(async() =>{
+    await db.sync();
+})();
 
 app.use(session({
     secret: process.env.SESSION_SECRET,
@@ -32,7 +32,7 @@ app.use(session({
 }));
 app.use(cors({
     credentials: true,
-    origin: 'http://localhost:3000',
+    origin: 'http://localhost:8080',
 
 }));
 app.use(FileUpload());
@@ -43,6 +43,6 @@ app.use(AuthRoute);
 
 // store.sync();
 
-app.listen(process.env.APP_PORT || 5000, function(){
-    console.log("Express Berjalan Pada port %d in %s mode", this.address().port, app.settings.env);
+app.listen(process.env.APP_PORT,() => {
+    console.log("Express Berjalan Pada 5500");
   });
